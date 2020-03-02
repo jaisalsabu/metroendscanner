@@ -26,77 +26,77 @@ String strtstation;
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         station.setAdapter(aa);
         btn=findViewById(R.id.button);
-        switch(station.getSelectedItem().toString()) {
-            case "Aluva":
-                strtstation="ALV";
-                break;
-            case "Pulinchodu":
-                strtstation="PLD";
-                break;
-            case "Companypadi":
-                strtstation="CPD";
-                break;
-            case "Ambattukav":
-                strtstation="AMK";
-                break;
-            case "Muttom":
-                strtstation="MTM";
-                break;
-            case "Kalamassery":
-                strtstation="KLM";
-                break;
-            case "Cusat":
-                strtstation="CST";
-                break;
-            case "Pathadipalam":
-                strtstation="PTP";
-                break;
-            case "Edapally":
-                strtstation="EDP";
-                break;
-            case "Changampuzha Park":
-                strtstation="CHP";
-                break;
-            case "Palarivattom":
-                strtstation="PLV";
-                break;
-            case "J. L. N. Stadium":
-                strtstation="JLN";
-                break;
-            case "Kaloor":
-                strtstation="KLR";
-                break;
-            case "Town Hall":
-                strtstation="THL";
-                break;
-            case "M. G. Road":
-                strtstation="MGR";
-                break;
-            case "Maharaja's College":
-                strtstation="MHC";
-                break;
-            case "Ernakulam South":
-                strtstation="ELS";
-                break;
-            case "Kadavanthra":
-                strtstation="KDV";
-                break;
-            case "Elamkulam":
-                strtstation="ELK";
-                break;
-            case "Vyttila":
-                strtstation="VYT";
-                break;
-            case "Thaikoodam":
-                strtstation="THM";
-                break;
-            default:
-                strtstation="000000";
-                break;
-        }
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                switch(station.getSelectedItem().toString()) {
+                    case "Aluva":
+                        strtstation = "ALV";
+                        break;
+                    case "Pulinchodu":
+                        strtstation = "PLD";
+                        break;
+                    case "Companypadi":
+                        strtstation = "CPD";
+                        break;
+                    case "Ambattukav":
+                        strtstation = "AMK";
+                        break;
+                    case "Muttom":
+                        strtstation = "MTM";
+                        break;
+                    case "Kalamassery":
+                        strtstation = "KLM";
+                        break;
+                    case "Cusat":
+                        strtstation = "CST";
+                        break;
+                    case "Pathadipalam":
+                        strtstation = "PTP";
+                        break;
+                    case "Edapally":
+                        strtstation = "EDP";
+                        break;
+                    case "Changampuzha Park":
+                        strtstation = "CHP";
+                        break;
+                    case "Palarivattom":
+                        strtstation = "PLV";
+                        break;
+                    case "J. L. N. Stadium":
+                        strtstation = "JLN";
+                        break;
+                    case "Kaloor":
+                        strtstation = "KLR";
+                        break;
+                    case "Town Hall":
+                        strtstation = "THL";
+                        break;
+                    case "M. G. Road":
+                        strtstation = "MGR";
+                        break;
+                    case "Maharaja's College":
+                        strtstation = "MHC";
+                        break;
+                    case "Ernakulam South":
+                        strtstation = "ELS";
+                        break;
+                    case "Kadavanthra":
+                        strtstation = "KDV";
+                        break;
+                    case "Elamkulam":
+                        strtstation = "ELK";
+                        break;
+                    case "Vyttila":
+                        strtstation = "VYT";
+                        break;
+                    case "Thaikoodam":
+                        strtstation = "THM";
+                        break;
+                    default:
+                        strtstation = "000000";
+                        break;
+                }
                 Toast.makeText(MainActivity.this,strtstation,Toast.LENGTH_LONG).show();
                 Intent iore=new Intent(getApplicationContext(),Scanner.class);
                 iore.putExtra("Station",strtstation);

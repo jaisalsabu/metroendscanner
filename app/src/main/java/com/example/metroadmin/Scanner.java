@@ -28,7 +28,7 @@ public class Scanner extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
         if (result != null) {
-            if (result.getContents().substring(0,3).equals(stnid)) {
+            if (result.getContents().substring(3,6).equals(stnid)) {
                 Toast.makeText(this, "GATES OPENING", Toast.LENGTH_LONG).show();
             } else {
                   Toast.makeText(this,"WRONG STATION",Toast.LENGTH_LONG).show();
